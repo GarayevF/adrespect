@@ -1,0 +1,1426 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url(../font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Italic-Medium";
+  src: url(../font/Montserrat-Italic-Medium.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url(../font/Montserrat-Medium.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+span, h1, p {
+  transition: 0.4s;
+}
+
+.show-animation {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.hidden {
+  transition: 0.4s;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+#Header {
+  padding: 24px 0;
+}
+#Header .container {
+  display: flex;
+  justify-content: space-between;
+}
+#Header .container .right nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+#Header .container .right nav .nav_menu_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+#Header .container .right nav .nav_menu_item a {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "Inter-Regular";
+  color: #111111;
+  transition: 0.4s;
+}
+#Header .container .right nav .nav_menu_item .dropdown {
+  position: relative;
+  display: inline-block;
+  align-self: flex-end;
+}
+#Header .container .right nav .nav_menu_item .dropdown .dropbtn {
+  color: #111111;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: none;
+  gap: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#Header .container .right nav .nav_menu_item .dropdown .dropbtn span {
+  pointer-events: none;
+  transition: 0.4s;
+}
+#Header .container .right nav .nav_menu_item .dropdown .dropbtn i {
+  font-size: 12px;
+  transition: 0.4s;
+  pointer-events: none;
+}
+#Header .container .right nav .nav_menu_item .dropdown .dropdown-content {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  width: -moz-max-content;
+  width: max-content;
+  height: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: 0.4s;
+  border-radius: 8px;
+}
+#Header .container .right nav .nav_menu_item .dropdown .dropdown-content a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+#Header .container .right nav .nav_menu_item .search-div {
+  transition: 0.4s;
+  width: 0px;
+}
+#Header .container .right nav .nav_menu_item .search-div .input-div {
+  display: flex;
+  position: relative;
+  border-radius: 0.5rem 0.5rem;
+  background: #fff;
+  align-items: center;
+  height: 100%;
+  transition: 0.4s;
+}
+#Header .container .right nav .nav_menu_item .search-div .input-div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 12px;
+  height: 100%;
+  text-overflow: ellipsis;
+}
+#Header .container .right nav .nav_menu_item i {
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: #111111;
+  line-height: 28px;
+}
+#Header .container .right nav .nav_menu_item i.fa-chevron-left {
+  transform: rotate(-90deg);
+}
+#Header .container .right nav .nav_menu_item:hover .nav-item, #Header .container .right nav .nav_menu_item:hover i, #Header .container .right nav .nav_menu_item:hover button {
+  color: #DCC1AB !important;
+}
+
+#Header-m {
+  padding: 24px 0;
+}
+#Header-m .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#Header-m .container .right .menu-div {
+  padding: 8px 10px;
+  background-color: rgb(234, 234, 234);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+#Header-m .container .right .menu-div i {
+  font-size: 24px;
+  pointer-events: none;
+}
+#Header-m #header-m-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 0;
+  transition: 0.4s;
+  background-color: #DCC1AB;
+  margin-top: 0;
+}
+#Header-m #header-m-dropdown nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item a {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Inter-Regular";
+  color: #111111;
+  transition: 0.4s;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .m-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .m-dropdown-item .dropdown-m {
+  position: relative;
+  display: inline-block;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .m-dropdown-item .dropdown-m .dropbtn-m {
+  color: #111111;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: none;
+  gap: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .m-dropdown-item .dropdown-m .dropbtn-m span {
+  pointer-events: none;
+  transition: 0.4s;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .m-dropdown-item .dropdown-m .dropbtn-m i {
+  font-size: 12px;
+  transition: 0.4s;
+  pointer-events: none;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .m-dropdown-item .dropdown-content-m {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  width: -moz-max-content;
+  width: max-content;
+  height: 0;
+  z-index: 9999;
+  transition: 0.4s;
+  width: 100%;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .m-dropdown-item .dropdown-content-m a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .search-div {
+  transition: 0.4s;
+  width: 300px;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .search-div .input-div {
+  display: flex;
+  position: relative;
+  border-radius: 0.5rem 0.5rem;
+  background: #fff;
+  align-items: center;
+  height: 100%;
+  transition: 0.4s;
+  border: 1px solid #d9d9d9;
+  padding: 5px;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item .search-div .input-div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  height: 100%;
+  text-overflow: ellipsis;
+  padding: 5px;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: #111111;
+  line-height: 28px;
+}
+#Header-m #header-m-dropdown nav .nav_menu_item i.fa-chevron-left {
+  transform: rotate(-90deg);
+}
+#Header-m #header-m-dropdown nav .nav_menu_item:hover .nav-item, #Header-m #header-m-dropdown nav .nav_menu_item:hover i, #Header-m #header-m-dropdown nav .nav_menu_item:hover button {
+  color: #1B5B31 !important;
+}
+#Header-m #header-m-dropdown.show {
+  margin-top: 12px;
+}
+
+#Main #Intro {
+  background-color: #DCC1AB;
+}
+#Main #Intro .swiper {
+  position: relative;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  max-height: 737px;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .left, #Main #Intro .swiper .swiper-wrapper .swiper-slide .right {
+  flex: 1;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .left img, #Main #Intro .swiper .swiper-wrapper .swiper-slide .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .right {
+  display: flex;
+  justify-content: flex-end;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .left {
+  padding-left: 4.5rem;
+  width: 600px;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .left h1 {
+  color: #111111;
+  font-family: "Montserrat-Medium";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .left p {
+  margin: 44px 0 72px 0;
+  color: #111111;
+  font-family: "Inter-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 36px;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-buttons .left-button {
+  display: flex;
+  padding: 12px 24px 14px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  background: #1B5B31;
+  color: #F5F0EC;
+}
+#Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-buttons .right-button {
+  display: flex;
+  padding: 12px 22px 14px 22px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 200px;
+  border: 1px solid #1B5B31;
+  color: #1B5B31;
+}
+#Main #Intro .swiper .custom-buttons {
+  display: inline-flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  align-items: center;
+  gap: 32px;
+  padding: 24px 32px;
+  background-color: #F5F0EC;
+  cursor: pointer;
+}
+#Main #Intro .swiper .custom-buttons i {
+  font-size: 28px;
+  pointer-events: none;
+}
+#Main #Intro .swiper .custom-buttons .custom-swiper-button-prev,
+#Main #Intro .swiper .custom-buttons .custom-swiper-button-next {
+  display: flex;
+  align-items: center;
+}
+#Main #About {
+  background-color: #1B5B31;
+}
+#Main #About .about-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  max-height: 737px;
+  overflow: hidden;
+}
+#Main #About .about-container .left, #Main #About .about-container .right {
+  flex: 1;
+}
+#Main #About .about-container .left img, #Main #About .about-container .right img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#Main #About .about-container .left {
+  display: flex;
+  justify-content: flex-end;
+}
+#Main #About .about-container .right {
+  padding-right: 4.5rem;
+  padding-left: 6rem;
+  width: 600px;
+  overflow: hidden;
+}
+#Main #About .about-container .right span {
+  color: #F5F0EC;
+  font-family: "Inter-Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  letter-spacing: -0.12px;
+}
+#Main #About .about-container .right h1 {
+  color: #F5F0EC;
+  font-family: "Montserrat-Medium";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px;
+}
+#Main #About .about-container .right p {
+  margin: 44px 0 72px 0;
+  color: #F5F0EC;
+  font-family: "Inter-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+#Main #About .about-container .right .intro-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 36px;
+}
+#Main #About .about-container .right .intro-buttons .right-button {
+  display: flex;
+  padding: 12px 22px 14px 22px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 200px;
+  border: 1px solid #F5F0EC;
+  color: #F5F0EC;
+}
+#Main #Offer {
+  background-color: #F5F0EC;
+}
+#Main #Offer .title-div {
+  padding: 7.5rem 0 6rem 14rem;
+  width: 930px;
+}
+#Main #Offer .title-div .category {
+  color: #1B5B31;
+  font-family: "Inter-Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.12px;
+}
+#Main #Offer .title-div .title {
+  color: #111;
+  font-family: "Montserrat-Medium";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -1.44px;
+  margin: 16px 0 32px 0;
+}
+#Main #Offer .title-div .description {
+  color: #111;
+  font-family: "Inter-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+#Main #Offer .container {
+  padding-bottom: 160px;
+}
+#Main #Offer .container .row .card-box {
+  display: flex;
+  justify-content: center;
+}
+#Main #Offer .container .row .card-box .offer-card {
+  display: flex;
+  width: 378px;
+  height: 370px;
+  padding: 48px 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 28px;
+  background: #FFF;
+  cursor: pointer;
+  border: 1px solid #FFF;
+  transition: 0.4s;
+}
+#Main #Offer .container .row .card-box .offer-card .card-title {
+  color: #111;
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -1.4px;
+}
+#Main #Offer .container .row .card-box .offer-card .card-desc {
+  color: #111;
+  font-family: "Inter-Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.14px;
+}
+#Main #Offer .container .row .card-box .offer-card .card-link {
+  display: flex;
+  padding-bottom: 0px;
+  align-items: center;
+  gap: 10px;
+  color: #1B5B31;
+  border-bottom: 1px solid #1B5B31;
+}
+#Main #Offer .container .row .card-box .offer-card:hover {
+  border-color: #1B5B31;
+  transform: translateY(20px);
+  scale: 1.1;
+  background-color: #1B5B31;
+}
+#Main #Offer .container .row .card-box .offer-card:hover img {
+  filter: invert(1);
+}
+#Main #Offer .container .row .card-box .offer-card:hover h2, #Main #Offer .container .row .card-box .offer-card:hover p, #Main #Offer .container .row .card-box .offer-card:hover a {
+  color: #fff;
+}
+#Main #Offer .container .row .card-box .offer-card:hover a {
+  border-bottom: 1px solid #fff;
+}
+#Main #Offer .container .row .card-box .offer-card img {
+  width: 40px;
+}
+#Main #Projects {
+  background-color: #DCC1AB;
+}
+#Main #Projects .title-div {
+  padding: 7.5rem 0 6rem 10rem;
+}
+#Main #Projects .title-div span {
+  color: #1B5B31;
+  font-family: "Inter-Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.12px;
+}
+#Main #Projects .title-div h1 {
+  color: #111;
+  font-family: "Montserrat-Medium";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -1.44px;
+}
+#Main #Projects .title-div h1 i {
+  color: #111;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 115%;
+}
+#Main #Projects .gallery-div {
+  position: relative;
+  max-height: 1400px;
+  overflow: hidden;
+}
+#Main #Projects .gallery-div .linear-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0) 100%);
+}
+#Main #Projects .gallery-div .expand-gallery {
+  display: inline-flex;
+  padding: 12px 22px 14px 22px;
+  align-items: center;
+  background-color: transparent;
+  gap: 8px;
+  border-radius: 200px;
+  border: 1px solid #111;
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+#Main #Instagram {
+  padding: 60px 7.5rem;
+}
+#Main #Instagram .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1B5B31;
+  padding: 120px 110px;
+}
+#Main #Instagram .content .left h2 {
+  color: #F5F0EC;
+  font-family: "Montserrat-Medium";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -2px;
+}
+#Main #Instagram .content .left h2 span {
+  font-style: italic;
+}
+#Main #Instagram .content .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+#Main #Instagram .content .right span {
+  color: #F5F0EC;
+  font-family: "Inter-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+#Main #Instagram .content .right .insta-link {
+  display: flex;
+  padding: 10px 24px 12px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  background: #F5F0EC;
+  color: #1B5B31;
+  font-size: 16px;
+}
+
+#Footer {
+  display: flex;
+  padding: 80px 7.5rem;
+  flex-direction: column;
+  align-items: center;
+  background: #111;
+}
+#Footer .footer-line {
+  height: 2px;
+  width: 100%;
+  background: #F5F0EC;
+  margin: 62px 0;
+}
+#Footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#Footer .top .right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+#Footer .top .right span {
+  color: #F5F0EC;
+  font-family: "Inter-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+#Footer .top .right button {
+  display: flex;
+  padding: 12px 24px 14px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  background: #1B5B31;
+  border: none;
+  color: #F5F0EC;
+}
+#Footer .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#Footer .middle .left {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+#Footer .middle .left .social-media-link {
+  color: #F5F0EC;
+  text-align: center;
+  font-family: "Inter-Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.14px;
+}
+#Footer .middle .right {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+#Footer .middle .right .phone, #Footer .middle .right .mail {
+  color: #F5F0EC;
+  text-align: center;
+  font-family: "Inter-Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.14px;
+}
+#Footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 120px;
+}
+#Footer .bottom .left .company {
+  color: #F5F0EC;
+  font-family: "Inter-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+#Footer .bottom .right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#Footer .bottom .right span {
+  color: #F5F0EC;
+  font-family: "Inter-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+
+@media (max-width: 992px) {
+  #Header {
+    display: none;
+  }
+  #Header-m {
+    display: block;
+  }
+  #Offer .container {
+    padding-bottom: 80px !important;
+  }
+  #Offer .container .row .card-box {
+    margin-bottom: 20px;
+  }
+  #Instagram .content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 30px 30px;
+  }
+}
+@media (min-width: 992px) {
+  #Header {
+    display: block;
+  }
+  #Header-m {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left {
+    padding-left: 4rem;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content p {
+    margin: 22px 0 36px 0;
+    line-height: 140%;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons {
+    gap: 30px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .left-button, #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .right-button {
+    font-size: 14px;
+    padding: 12px 18px 14px 18px;
+  }
+  #Main #Intro .swiper .custom-buttons {
+    gap: 28px;
+    padding: 20px 28px;
+  }
+  #Main #Intro .swiper .custom-buttons i {
+    font-size: 26px;
+  }
+  #Main #Offer .title-div {
+    padding: 6rem 0 4rem 10rem;
+    width: 730px;
+  }
+  #Main #Offer .title-div .category {
+    font-size: 12px;
+  }
+  #Main #Offer .title-div .title {
+    font-size: 44px;
+  }
+  #Main #Offer .title-div .description {
+    font-size: 16px;
+  }
+  #Main #About .about-container .right {
+    padding: 0 3.5rem;
+  }
+  #Main #About .about-container .right .intro-content h1 {
+    font-size: 44px;
+    line-height: 60px;
+  }
+  #Main #About .about-container .right .intro-content p {
+    margin: 22px 0 36px 0;
+    line-height: 140%;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons {
+    gap: 30px;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons .left-button, #Main #About .about-container .right .intro-content .intro-buttons .right-button {
+    font-size: 14px;
+    padding: 12px 18px 14px 18px;
+  }
+  #Main #Projects .title-div {
+    padding: 5rem 0 4rem 3.5rem;
+  }
+  #Main #Projects .title-div .title {
+    font-size: 42px;
+  }
+  #Main #Projects .title-div .title i {
+    font-size: 42px;
+  }
+  #Main #Instagram .content {
+    padding: 30px 30px;
+  }
+  #Main #Instagram .content .left h2 {
+    font-size: 36px;
+  }
+}
+@media (min-width: 870px) and (max-width: 992px) {
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left {
+    padding-left: 3.5rem;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content p {
+    font-size: 14px;
+    margin: 18px 0 30px 0;
+    line-height: 130%;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons {
+    gap: 24px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .left-button, #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .right-button {
+    font-size: 12px;
+    padding: 12px 14px 12px 14px;
+  }
+  #Main #Intro .swiper .custom-buttons {
+    gap: 26px;
+    padding: 18px 26px;
+  }
+  #Main #Intro .swiper .custom-buttons i {
+    font-size: 24px;
+  }
+  #Main #Offer .title-div {
+    padding: 4rem 0 3rem 6rem;
+    width: 650px;
+  }
+  #Main #Offer .title-div .category {
+    font-size: 12px;
+  }
+  #Main #Offer .title-div .title {
+    font-size: 40px;
+  }
+  #Main #Offer .title-div .description {
+    font-size: 14px;
+  }
+  #Main #About .about-container .right {
+    padding: 0 2.5rem;
+  }
+  #Main #About .about-container .right .intro-content h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  #Main #About .about-container .right .intro-content p {
+    font-size: 14px;
+    margin: 18px 0 30px 0;
+    line-height: 130%;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons {
+    gap: 24px;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons .left-button, #Main #About .about-container .right .intro-content .intro-buttons .right-button {
+    font-size: 12px;
+    padding: 12px 14px 12px 14px;
+  }
+  #Main #Projects .title-div {
+    padding: 4rem 0 4rem 2.5rem;
+  }
+  #Main #Projects .title-div .title {
+    font-size: 36px;
+  }
+  #Main #Projects .title-div .title i {
+    font-size: 36px;
+  }
+  #Main #Instagram {
+    padding: 60px 5.5rem;
+  }
+  #Main #Instagram .content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 30px 30px;
+  }
+  #Main #Instagram .content .left h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+  #Main #Instagram .content .right {
+    text-align: center;
+  }
+  #Main #Instagram .content .right .insta-link {
+    align-self: center;
+  }
+  #Footer {
+    padding: 60px 4.5rem;
+  }
+  #Footer .top, #Footer .middle, #Footer .bottom {
+    flex-direction: column;
+  }
+  #Footer .right {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 800px) and (max-width: 870px) {
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left {
+    padding-left: 3rem;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content p {
+    font-size: 12px;
+    margin: 14px 0 20px 0;
+    line-height: 130%;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons {
+    gap: 14px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .left-button, #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .right-button {
+    font-size: 12px;
+    padding: 8px 10px 8px 10px;
+  }
+  #Main #Intro .swiper .custom-buttons {
+    gap: 24px;
+    padding: 18px 24px;
+  }
+  #Main #Intro .swiper .custom-buttons i {
+    font-size: 24px;
+  }
+  #Main #Offer .title-div {
+    padding: 3rem 0 2rem 3rem;
+    width: 600px;
+  }
+  #Main #Offer .title-div .category {
+    font-size: 12px;
+  }
+  #Main #Offer .title-div .title {
+    font-size: 36px;
+  }
+  #Main #Offer .title-div .description {
+    font-size: 14px;
+  }
+  #Main #About .about-container .right {
+    padding: 0 2rem;
+  }
+  #Main #About .about-container .right .intro-content h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  #Main #About .about-container .right .intro-content p {
+    font-size: 12px;
+    margin: 14px 0 20px 0;
+    line-height: 130%;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons {
+    gap: 14px;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons .left-button, #Main #About .about-container .right .intro-content .intro-buttons .right-button {
+    font-size: 12px;
+    padding: 8px 10px 8px 10px;
+  }
+  #Main #Projects .title-div {
+    padding: 3rem 0 2.5rem 2rem;
+  }
+  #Main #Projects .title-div .title {
+    font-size: 32px;
+  }
+  #Main #Projects .title-div .title i {
+    font-size: 32px;
+  }
+  #Main #Instagram .content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  #Main #Instagram .content .left h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+  #Main #Instagram .content .right {
+    text-align: center;
+  }
+  #Main #Instagram .content .right .insta-link {
+    align-self: center;
+  }
+  #Footer {
+    padding: 60px 4.5rem;
+  }
+  #Footer .top, #Footer .middle, #Footer .bottom {
+    flex-direction: column;
+  }
+  #Footer .right {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 680px) and (max-width: 800px) {
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left {
+    padding-left: 2.5rem;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content p {
+    font-size: 12px;
+    margin: 14px 0 20px 0;
+    line-height: 130%;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons {
+    gap: 18px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .left-button, #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .right-button {
+    font-size: 10px;
+    padding: 6px 8px 6px 8px;
+  }
+  #Main #Intro .swiper .custom-buttons {
+    gap: 22px;
+    padding: 14px 20px;
+  }
+  #Main #Intro .swiper .custom-buttons i {
+    font-size: 20px;
+  }
+  #Main #Offer .title-div {
+    padding: 2.5rem 0 2rem 2.5rem;
+    width: 550px;
+  }
+  #Main #Offer .title-div .category {
+    font-size: 12px;
+  }
+  #Main #Offer .title-div .title {
+    font-size: 32px;
+  }
+  #Main #Offer .title-div .description {
+    font-size: 14px;
+  }
+  #Main #About .about-container {
+    gap: 22px;
+  }
+  #Main #About .about-container .right {
+    padding: 0 1rem;
+  }
+  #Main #About .about-container .right .intro-content h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  #Main #About .about-container .right .intro-content p {
+    font-size: 12px;
+    margin: 14px 0 20px 0;
+    line-height: 130%;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons {
+    gap: 18px;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons .left-button, #Main #About .about-container .right .intro-content .intro-buttons .right-button {
+    font-size: 10px;
+    padding: 6px 8px 6px 8px;
+  }
+  #Main #Projects .title-div {
+    padding: 2.5rem 0 2rem 1rem;
+  }
+  #Main #Projects .title-div .title {
+    font-size: 30px;
+  }
+  #Main #Projects .title-div .title i {
+    font-size: 30px;
+  }
+  #Main #Instagram {
+    padding: 60px 3.5rem;
+  }
+  #Main #Instagram .content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  #Main #Instagram .content .left h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+  #Main #Instagram .content .right {
+    text-align: center;
+  }
+  #Main #Instagram .content .right span {
+    font-size: 14px;
+  }
+  #Main #Instagram .content .right .insta-link {
+    align-self: center;
+    font-size: 14px;
+  }
+  #Footer {
+    padding: 60px 3.5rem;
+  }
+  #Footer .top, #Footer .middle, #Footer .bottom {
+    flex-direction: column;
+  }
+  #Footer .right {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 635px) and (max-width: 680px) {
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left {
+    padding-left: 1.5rem;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content h1 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content p {
+    font-size: 10px;
+    margin: 10px 0 14px 0;
+    line-height: 130%;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons {
+    gap: 14px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .left-button, #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .right-button {
+    font-size: 10px;
+    padding: 4px 6px 4px 6px;
+  }
+  #Main #Intro .swiper .custom-buttons {
+    gap: 20px;
+    padding: 12px 18px;
+  }
+  #Main #Intro .swiper .custom-buttons i {
+    font-size: 18px;
+  }
+  #Main #Offer .title-div {
+    padding: 2.5rem 0 2rem 1.5rem;
+    width: 500px;
+  }
+  #Main #Offer .title-div .category {
+    font-size: 10px;
+  }
+  #Main #Offer .title-div .title {
+    font-size: 28px;
+  }
+  #Main #Offer .title-div .description {
+    font-size: 12px;
+  }
+  #Main #About .about-container {
+    gap: 20px;
+  }
+  #Main #About .about-container .right {
+    padding: 0 1.5rem;
+  }
+  #Main #About .about-container .right .intro-content h1 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  #Main #About .about-container .right .intro-content p {
+    font-size: 10px;
+    margin: 10px 0 14px 0;
+    line-height: 130%;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons {
+    gap: 14px;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons .left-button, #Main #About .about-container .right .intro-content .intro-buttons .right-button {
+    font-size: 10px;
+    padding: 4px 6px 4px 6px;
+  }
+  #Main #Projects .title-div {
+    padding: 2rem 0 1.5rem 1.5rem;
+  }
+  #Main #Projects .title-div .title {
+    font-size: 28px;
+  }
+  #Main #Projects .title-div .title i {
+    font-size: 28px;
+  }
+  #Main #Instagram {
+    padding: 40px 2.5rem;
+  }
+  #Main #Instagram .content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  #Main #Instagram .content .left h2 {
+    text-align: center;
+    font-size: 26px;
+  }
+  #Main #Instagram .content .right {
+    text-align: center;
+  }
+  #Main #Instagram .content .right span {
+    font-size: 14px;
+  }
+  #Main #Instagram .content .right .insta-link {
+    align-self: center;
+    font-size: 14px;
+  }
+  #Footer {
+    padding: 40px 2.5rem;
+  }
+  #Footer .top, #Footer .middle, #Footer .bottom {
+    flex-direction: column;
+  }
+  #Footer .right {
+    margin-top: 30px;
+  }
+  #Footer .top .right {
+    flex-direction: column;
+  }
+}
+@media (max-width: 635px) {
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide {
+    position: relative;
+    height: 350px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left {
+    height: 100%;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(220, 193, 171, 0.6509803922);
+    z-index: 99;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content p {
+    font-size: 12px;
+    margin: 14px 0 20px 0;
+    line-height: 130%;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons {
+    gap: 18px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .left-button, #Main #Intro .swiper .swiper-wrapper .swiper-slide .left .intro-content .intro-buttons .right-button {
+    font-size: 10px;
+    padding: 6px 8px 6px 8px;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .right {
+    position: absolute;
+  }
+  #Main #Intro .swiper .swiper-wrapper .swiper-slide .right image {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #Main #Intro .swiper .custom-buttons {
+    gap: 20px;
+    padding: 12px 18px;
+  }
+  #Main #Intro .swiper .custom-buttons i {
+    font-size: 18px;
+  }
+  #Main #Offer .title-div {
+    padding: 1.5rem 2rem 1rem 2rem;
+    width: unset;
+  }
+  #Main #Offer .title-div .category {
+    font-size: 10px;
+  }
+  #Main #Offer .title-div .title {
+    font-size: 28px;
+  }
+  #Main #Offer .title-div .description {
+    font-size: 12px;
+  }
+  #Main #About .about-container {
+    position: relative;
+    height: 350px;
+  }
+  #Main #About .about-container .right {
+    height: 100%;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(220, 193, 171, 0.6509803922);
+    z-index: 99;
+  }
+  #Main #About .about-container .right .intro-content span {
+    color: #111111;
+    font-size: 10px;
+  }
+  #Main #About .about-container .right .intro-content h1 {
+    font-size: 26px;
+    line-height: 30px;
+    color: #111111;
+  }
+  #Main #About .about-container .right .intro-content p {
+    font-size: 12px;
+    margin: 14px 0 20px 0;
+    line-height: 130%;
+    color: #111111;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons {
+    gap: 18px;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons .left-button, #Main #About .about-container .right .intro-content .intro-buttons .right-button {
+    font-size: 10px;
+    padding: 6px 8px 6px 8px;
+    color: #1B5B31;
+    border-color: #1B5B31;
+  }
+  #Main #About .about-container .right .intro-content .intro-buttons .left-button i, #Main #About .about-container .right .intro-content .intro-buttons .right-button i {
+    color: #1B5B31;
+  }
+  #Main #About .about-container .left {
+    position: absolute;
+  }
+  #Main #About .about-container .left image {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #Main #Projects .title-div {
+    padding: 2rem 0 1.5rem 1.5rem;
+  }
+  #Main #Projects .title-div .title {
+    font-size: 26px;
+  }
+  #Main #Projects .title-div .title i {
+    font-size: 26px;
+  }
+  #Main #Instagram {
+    padding: 30px 1.5rem;
+  }
+  #Main #Instagram .content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  #Main #Instagram .content .left h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+  #Main #Instagram .content .right {
+    text-align: center;
+  }
+  #Main #Instagram .content .right span {
+    font-size: 12px;
+  }
+  #Main #Instagram .content .right .insta-link {
+    align-self: center;
+    font-size: 14px;
+  }
+  #Footer {
+    padding: 30px 1.5rem;
+  }
+  #Footer .top, #Footer .middle, #Footer .bottom {
+    flex-direction: column;
+  }
+  #Footer .right {
+    margin-top: 30px;
+  }
+  #Footer .top .right {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
